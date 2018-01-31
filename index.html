@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -112,7 +112,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/one/" data-id="cjd2ffw4t0001bltftroefp5x" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/31/one/" data-id="cjd2fkhs00001c5tfvwcez10d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,7 +157,68 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/31/hello-world/" data-id="cjd2ffw4o0000bltf9vpc6ujl" class="article-share-link">Teilen</a>
+      <a data-url="http://yoursite.com/2018/01/31/hello-world/" data-id="cjd2fkhrw0000c5tftzs1lx4s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-软件安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/17/软件安装/" class="article-date">
+  <time datetime="2017-10-17T02:59:47.000Z" itemprop="datePublished">2017-10-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/17/软件安装/">Python配置</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>[TOC]</p>
+<h1 id="Python配置"><a href="#Python配置" class="headerlink" title="Python配置"></a>Python配置</h1><h3 id="1-安装套件管理工具-Homebrew"><a href="#1-安装套件管理工具-Homebrew" class="headerlink" title="1 安装套件管理工具 Homebrew"></a>1 安装套件管理工具 Homebrew</h3><p>1.1 <a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">安装 Homebrew</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<p>1.2 查看是否安装成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew doctor1</span><br></pre></td></tr></table></figure>
+<h3 id="2-安装Python"><a href="#2-安装Python" class="headerlink" title="2 安装Python"></a>2 安装Python</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install python1</span><br></pre></td></tr></table></figure>
+<h3 id="3-设置路径（可选）"><a href="#3-设置路径（可选）" class="headerlink" title="3 设置路径（可选）"></a>3 设置路径（可选）</h3><p>如果不设置路径，则使用python的话，会默认用系统的。(这个没有具体执行，所以这个需要自己尝试)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## 修改/etc/paths，把/usr/local/bin 移到上面去</span><br><span class="line">sudo vim /etc/paths</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<p>拓展：<br>查看当前path是什么。<br>PATH 的用途：<br>​    告诉系統，我们的brew在哪里。会从上往下查找。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo $PAHTH</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+<h3 id="4-确认安装"><a href="#4-确认安装" class="headerlink" title="4 确认安装"></a>4 确认安装</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 系统自带的python2.7，目录为/usr/bin/python</span><br><span class="line">which python</span><br><span class="line">//brew安装的python3.4,目录为/usr/local/bin/python3</span><br><span class="line">which python3</span><br><span class="line">12345</span><br></pre></td></tr></table></figure>
+<h3 id="5-使用"><a href="#5-使用" class="headerlink" title="5 使用"></a>5 使用</h3><p><strong>未执行操作4</strong>的情况（推荐）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 系统自带的</span><br><span class="line">python a.py</span><br><span class="line">//brew安装的</span><br><span class="line">python3 a.py1234</span><br></pre></td></tr></table></figure>
+<p>执行<strong>操作4</strong>的情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 系统自带的</span><br><span class="line">/usr/bin/python a.py</span><br><span class="line">//brew安装的</span><br><span class="line">python a.py</span><br><span class="line"></span><br><span class="line">123456</span><br></pre></td></tr></table></figure>
+<h3 id="6-安装pip"><a href="#6-安装pip" class="headerlink" title="6 安装pip"></a>6 安装pip</h3><ul>
+<li>安装Python2.7以上版本，会自动带pip。</li>
+<li>系统自带的python没有pip，只有easy_install</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 给系统的python安装pip</span><br><span class="line">easy_install pip</span><br><span class="line">123</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用pip</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 系统自带的</span><br><span class="line">pip --version</span><br><span class="line">//brew安装的</span><br><span class="line">pip3 --version</span><br></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/17/软件安装/" data-id="cjd2fkhs20002c5tfiptlnery" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,9 +244,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
   </div>
 
@@ -193,7 +254,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -203,6 +264,10 @@
         
           <li>
             <a href="/2018/01/31/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/17/软件安装/">Python配置</a>
           </li>
         
       </ul>
